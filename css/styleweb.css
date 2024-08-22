@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+/* Estilos para el encabezado (header) */
+header {
+    background-color: #333;
+    color: #000000;
+    text-align: center;
+    padding: 1em 0;
+}
+header h1 {
+    margin: 0;
+}
+
+/* Estilos para la navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #333;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del logo/imagen */
+    .logoimg{
+        height: 100%;
+        max-height: 60px; /* Asegura que la imagen no exceda la altura del nav */
+        width: auto; /* Mantiene la proporción de la imagen */
+        margin-right: 10px; /* Espacio entre la imagen y el texto del logo */
+    }
+/* Estilo del logo */
+.navbar .logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Estilos del menú de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para los enlaces */
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Efecto hover */
+.nav-links li a:hover {
+    color: #f0a500;
+}
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    position: relative;
+    flex-grow: 1;
+    max-width: 200px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de búsqueda */
+.search-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: -30px;
+    color: #fff;
+}
+
+/* Estilos para el ícono de búsqueda */
+.search-btn i {
+    font-size: 24px;
+}
+
+/* Estilos para el icono de menú hamburguesa */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-top: 1px solid #444;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+    }
+
+    .burger {
+        display: flex;
+    }
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .logo {
+        content: "CBVY";
+    }
+}
+
+ /* Mostrar solo el botón de búsqueda en pantallas pequeñas */
+ .search-input {
+    display: none;
+}
+
+.search-btn {
+    display: block;
+}
+
+.search-container {
+    margin-left: auto;
+    max-width: 40px;
+}
+
+
+/* Mostrar el menú cuando se hace clic en el icono */
+.nav-active .nav-links {
+display: flex;
+}
+
+/* Mostrar el campo de búsqueda cuando se hace clic en el botón de búsqueda en pantallas pequeñas */
+.show-search .search-input {
+display: block;
+width: 100%;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* Estilos para las secciones */
+main {
+    display: flex; /* Flexbox para alinear section y aside */
+    justify-content: space-between; /* Espacio entre section y aside */
+    padding: 1em;
+    width: 100%;
+}
+section {
+    width: 70%; /* Ancho del section */
+    background-color: #f9f9f9;
+    padding: 1em;
+    margin-right: 1em;
+}
+section h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5em;
+}
+article {
+    margin-bottom: 1em;
+}
+article h3 {
+    margin-top: 0;
+}
+/* Estilos para el aside */
+aside {
+    width: 30%; /* Ancho del aside */
+    background-color: #7a6e6e;
+    padding: 1em;
+}
+aside h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5em;
+}
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+aside ul li {
+    margin-bottom: 0.5em;
+}
+aside ul li a {
+    color: #333;
+    text-decoration: none;
+}
+aside ul li a:hover {
+    color: #666;
+}/* Estilos para el body de página */
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    /* position:; */
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+}
+footer nav ul {
+    
+    padding: 0;
+    list-style-type: none;
+}
+footer nav ul li {
+    width: 100%;
+    display: inline;
+    margin-right: 1em;
+}
+footer nav ul li a {
+    width: 100%;
+    color: #474040;
+    text-decoration: none;
+}
+footer nav ul li a:hover {
+    text-decoration:dashed;
+}
+
