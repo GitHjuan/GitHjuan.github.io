@@ -20,10 +20,14 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 80px;
     background-color: #333;
     padding: 0 20px;
     font-family: Arial, sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Estilo del logo/imagen */
@@ -44,6 +48,7 @@ header h1 {
     list-style: none;
     display: flex;
     gap: 20px;
+    
 }
 
 /* Estilos para los enlaces */
@@ -51,18 +56,21 @@ header h1 {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+    align-items: right;
 }
 
 /* Efecto hover */
 .nav-links li a:hover {
-    color: #f0a500;
+    color: #e70505;
 }
 /* Estilos para el contenedor de búsqueda */
+div.search-container{
+    margin: 0px;
+}
 .search-container {
     position: relative;
     flex-grow: 1;
-    max-width: 200px;
-    margin-left: 20px;
+    max-width: 20px;
     display: flex;
     align-items: center;
 }
@@ -105,6 +113,32 @@ header h1 {
     background-color: #fff;
     border-radius: 5px;
 }
+/*SECCION DE LA IMAGEN DE*/
+
+.join-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.join-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.join-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
@@ -113,7 +147,7 @@ header h1 {
         position: absolute;
         top: 60px;
         left: 0;
-        width: 100%;
+        width: 90%;
         background-color: #333;
         flex-direction: column;
         align-items: center;
@@ -128,6 +162,8 @@ header h1 {
 
     .nav-links li a {
         font-size: 18px;
+        display: block; /* Asegura que el enlace ocupe todo el espacio disponible */
+        width: 100%; /* Ancho completo del enlace */
     }
 
     .burger {
@@ -153,83 +189,36 @@ header h1 {
 
 .search-container {
     margin-left: auto;
-    max-width: 40px;
+    max-width: 10px;
 }
-
+.join-text {
+    font-size: 32px;
+}
 
 /* Mostrar el menú cuando se hace clic en el icono */
 .nav-active .nav-links {
 display: flex;
+/* margin-top: 180px; */
 }
 
-/* Mostrar el campo de búsqueda cuando se hace clic en el botón de búsqueda en pantallas pequeñas */
+/* Mostrar el campo de búsqueda cuando se hace clic en el botón de búsqueda en pantallas pequeñas 
 .show-search .search-input {
 display: block;
 width: 100%;
 margin-left: 10px;
-margin-right: 10px;
+margin-right: 20px;
 }
-
-
-
-
-
-
+*/
 
 
 
 /* Estilos para las secciones */
-main {
-    display: flex; /* Flexbox para alinear section y aside */
-    justify-content: space-between; /* Espacio entre section y aside */
-    padding: 1em;
-    width: 100%;
-}
-section {
-    width: 70%; /* Ancho del section */
-    background-color: #f9f9f9;
-    padding: 1em;
-    margin-right: 1em;
-}
-section h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.5em;
-}
-article {
-    margin-bottom: 1em;
-}
-article h3 {
-    margin-top: 0;
-}
-/* Estilos para el aside */
-aside {
-    width: 30%; /* Ancho del aside */
-    background-color: #7a6e6e;
-    padding: 1em;
-}
-aside h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.5em;
-}
-aside ul {
-    list-style-type: none;
-    padding: 0;
-}
-aside ul li {
-    margin-bottom: 0.5em;
-}
-aside ul li a {
-    color: #333;
-    text-decoration: none;
-}
-aside ul li a:hover {
-    color: #666;
-}/* Estilos para el body de página */
-.contenedor{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+
+
+
+/* Estilos para el body de página */
+
+
 /* Estilos para el pie de página */
 footer {
     background-color: #333;
